@@ -1,0 +1,14 @@
+//  =============== BEGIN ASSESSMENT HEADER ================
+// Name: Tirth Modi
+// SID: 861168370
+// Date: 05-18-2015
+//  ================== END ASSESSMENT HEADER ===============
+Question 2:
+Part a: My selection sort is not stable because once I swap the relative order 
+        is not maintained. For instance, lets say I had the elements 9, 1, 1 in 
+        an array. If I called selection sort on the array, the 9 would swap with
+        the last 1 causing the array to not maintain relative order.
+
+Part b: You could test it with a vector with the elements 6, 6, 2. In this case,
+        my sort function would swap the first 6 with the 2 at the end. This 
+        would cause it to not be stable. 
