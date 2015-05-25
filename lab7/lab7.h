@@ -16,6 +16,7 @@
 
 using namespace std;
 
+//fills the vector with the words
 void fill(vector<string> &v, string listFile){
     ifstream file;
     file.open(listFile.c_str());
@@ -31,6 +32,7 @@ void fill(vector<string> &v, string listFile){
     file.close();
 }
 
+//gets the time for the tree
 int getTreeTime(const vector <string> &v, int n){
     set<string> s;
     auto start = chrono::high_resolution_clock::now();
@@ -41,6 +43,7 @@ int getTreeTime(const vector <string> &v, int n){
     return chrono::duration_cast<chrono::milliseconds> (end-start).count();
 }
 
+//gets the time for the hash table
 int getHashTime(vector <string> const &v, int n){
     unordered_set<string> h;
     auto start = chrono::high_resolution_clock::now();
@@ -51,12 +54,14 @@ int getHashTime(vector <string> const &v, int n){
     return chrono::duration_cast<chrono::milliseconds> (end-start).count();
 }
 
+//shuffles the words around
 void mix(vector <string> &v){
     for (unsigned i = 0; i < v.size(); i++){
         swap(v.at(i), v.at(rand() % 50000));
     }
 }
 
+//gets the average tree time
 int getTreeAvg(vector <string> &v, int n){
     mix(v);
     int ret = 0;
@@ -66,6 +71,7 @@ int getTreeAvg(vector <string> &v, int n){
     return ret / 10.0;
 }
 
+//gets the average hash table time
 int getHashAvg(vector <string> &v, int n){
     mix(v);
     int ret = 0;
