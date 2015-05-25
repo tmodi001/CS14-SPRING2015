@@ -1,0 +1,4 @@
+Part b: The tree insert time is slower than hash table when it comes to insert. 
+        With large amounts of data, the tree is extremely slow. One benefit of a
+        tree is that the data is sorted. Hash table does not sort the data, 
+        which allows it a much faster run time.
